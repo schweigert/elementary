@@ -1,0 +1,7 @@
+{
+  "dirs":["res://tests/unit/"],
+  "should_exit":true,
+	"should_maximize":false,
+  "ignore_pause":true,
+  "log": 3
+}
