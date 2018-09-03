@@ -1,6 +1,15 @@
 matrix:
   include:
   - language: cpp
+    os: linux
+    compiler: gcc
+    addons:
+      apt:
+        sources:
+          - mono
+        packages:
+          - &linux_deps [libasound2-dev, libfreetype6-dev, libgl1-mesa-dev, libglu1-mesa-dev, libx11-dev, libxcursor-dev, libxi-dev, libxinerama-dev, libxrandr-dev]
+          - &linux_mono_deps [mono-devel, msbuild]
     before_install:
       - export DISPLAY=:99.0
       - sh -e /etc/init.d/xvfb start
